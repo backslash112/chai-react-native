@@ -18,7 +18,7 @@ var MOCKED_MOVIES_DATA = [
   {title: 'Title', year: '2015', posters: {thumbnail: 'http://i.imgur.com/UePbdph.jpg'}},
 ];
 
-var REQUEST_URL = 'http://wingztv.com/public_api/random/';
+var REQUEST_URL = 'http://chai.media/public_api/random/';
 // var REQUEST_URL = 'https://raw.githubusercontent.com/facebook/react-native/master/docs/MoviesExample.json';
 
 var AwesomeProject = React.createClass({
