@@ -9,6 +9,7 @@ var {
   AppRegistry,
   Image,
   StyleSheet,
+  ListView,
   Text,
   View,
 } = React;
@@ -21,34 +22,40 @@ var REQUEST_URL = 'http://wingztv.com/public_api/random/';
 // var REQUEST_URL = 'https://raw.githubusercontent.com/facebook/react-native/master/docs/MoviesExample.json';
 
 var AwesomeProject = React.createClass({
-  getInitialState: function() { // only for returning values
+  getInitialState: function() {
     return {
-      movies: null,
+      dataSource: new ListView.DataSource({
+        rowHasChanged: (row1, row2) => row1 !== row2,
+      }),
+      loaded: false,
     };
   },
   componentDidMount: function() { // called once
     this.fetchData();
   },
   fetchData: function() {
-    console.log(REQUEST_URL);
     fetch(REQUEST_URL)
       .then((response) => response.json())
       .then((responseData) => {
         this.setState({
-          movies: responseData.result,
+          dataSource: this.state.dataSource.cloneWithRows(responseData.result),
+          loaded: true,
         });
       })
       .done();
-      // console.log(this.getState());
   },
   render: function() {
-    console.log('###'+this.state.movies)
-    if (!this.state.movies) {
+    if (!this.state.loaded) {
       return this.renderLoadingView();
     }
-    var movie = this.state.movies[0];
-    console.log(movie)
-    return this.renderMovie(movie);
+
+    return (
+      <ListView
+        dataSource={this.state.dataSource}
+        renderRow={this.renderMovie}
+        style={styles.listView}
+      />
+    );
   },
 
   renderLoadingView: function() {
@@ -79,6 +86,10 @@ var AwesomeProject = React.createClass({
 });
 
 var styles = StyleSheet.create({
+  listView: {
+    paddingTop: 20,
+    backgroundColor: '#F5FCFF',
+  },
   container: {
     flex: 1,
     flexDirection: 'row',
