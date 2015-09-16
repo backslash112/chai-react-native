@@ -49,3 +49,8 @@ If you get an error, in another window run
    * If it is a news article 
       > example: http://chai.media/video/south-china-sea-dispute-china-builds-third-airstrip-at-mischief-reef-tomonews/
       * Video play button will throw an intent to open the YouTube video
+
+## License
+
+##### chai-android is released under the [MIT License](https://opensource.org/licenses/MIT).
+The full license text is included in `LICENSE.txt`.
