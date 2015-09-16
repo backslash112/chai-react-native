@@ -32,8 +32,8 @@ If you get an error, in another window run
    * We should be able to store user settings in a {key:value} with the backend and keep both of these in sync (updates can flow both ways)
    * On the app side, it should be in a way that anywhere in the rest of the app we can query for these user settings (example: get list of all favorite categories of logged in user) this should not need a network query to the backend
    * Settings screen for user to check and update settings
-      > Enable / disable push notifications
-      > Choose favorite categories etc.
+      > enable / disable push notifications
+      > choose favorite categories etc.
 
 2. Main View of App
    * Swipey toolbar with -> My News | Today's News | Trending
