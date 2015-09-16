@@ -36,7 +36,7 @@ If you get an error, in another window run
       > choose favorite categories etc.
 
 2. Main View of App
-   * Swipey toolbar with -> My News | Today's News | Trending
+   * Swipe toolbar with -> My News | Today's News | Trending
    * Each section should be a good looking infinite scrolling cardview
    * On click of an item we will open the items detail view; back should return to the user's position in the scroll
    * Items must be cachable (1hr); i.e. you can expect new content only after an hour
