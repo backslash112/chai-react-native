@@ -3,6 +3,8 @@
 
 Chai is an ambitious project with the aim to create a full-fledged news consumption app completely in Facebook's React Native for Android.
 
+**Warning:** Chai is a work in progress; early-stage and experimental.
+
 ## Setup
 
 Follow "Getting Started" guide from [**React Native GitHub**](https://facebook.github.io/react-native/docs/getting-started.html#content)
