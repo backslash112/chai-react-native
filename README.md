@@ -1,5 +1,4 @@
 ![chai-media-logo](https://cloud.githubusercontent.com/assets/5732914/9900123/37762e6c-5c24-11e5-8446-35dbab4d4c64.png)
-## Chai Media
 
 Chai is an ambitious project with the aim to create a full-fledged news consumption app completely in Facebook's React Native for Android.
 
