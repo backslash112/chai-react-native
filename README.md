@@ -1,8 +1,9 @@
-### Chai Media
+![chai-media-logo](https://cloud.githubusercontent.com/assets/5732914/9900123/37762e6c-5c24-11e5-8446-35dbab4d4c64.png)
+## Chai Media
 
 Chai is an ambitious project with the aim to create a full-fledged news consumption app completely in Facebook's React Native for Android.
 
-## SETUP
+## Setup
 
 Follow "Getting Started" guide from [**React Native GitHub**](https://facebook.github.io/react-native/docs/getting-started.html#content)
 
@@ -16,7 +17,7 @@ If you get an error, in another window run
 `adb reverse tcp:8081 tcp:8081`
 
 
-## COMPLETED
+## Completed
 
 1. We have an initial view that
 	* loads json from http://chai.media/public_api/random/
