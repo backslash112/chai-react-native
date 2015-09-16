@@ -7,7 +7,7 @@ Chai is an ambitious project with the aim to create a full-fledged news consumpt
 
 ## Setup
 
-Follow "Getting Started" guide from [**Facebook's React Native GitHub**](https://facebook.github.io/react-native/docs/getting-started.html#content)
+Follow the "Getting Started" guide from [**Facebook's React Native GitHub**](https://facebook.github.io/react-native/docs/getting-started.html#content)
 
 ```
 npm install -g react-native-cli
