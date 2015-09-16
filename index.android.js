@@ -5,11 +5,14 @@
 'use strict';
 
 var React = require('react-native');
+var Intent = require('NativeModules').RNIntent;
+
 var {
   AppRegistry,
   Image,
   StyleSheet,
   ListView,
+  TouchableHighlight,
   Text,
   View,
 } = React;
@@ -45,6 +48,12 @@ var AwesomeProject = React.createClass({
       .done();
   },
   render: function() {
+    // Intent.mail({
+    //   subject: 'need help',
+    //   recipients: ['support@example.com'],
+    //   body: '',
+    // });
+
     if (!this.state.loaded) {
       return this.renderLoadingView();
     }
@@ -52,7 +61,7 @@ var AwesomeProject = React.createClass({
     return (
       <ListView
         dataSource={this.state.dataSource}
-        renderRow={this.renderMovie}
+        renderRow={this.renderNewsRow}
         style={styles.listView}
       />
     );
@@ -68,20 +77,29 @@ var AwesomeProject = React.createClass({
     );
   },
 
-  renderMovie: function(movie) {
+  renderNewsRow: function(news, sectionID: number, rowID: number) {
     return (
+      <TouchableHighlight onPress={() => this._pressRow(news.video_id,rowID)}>
       <View style={styles.container}>
         <Image
-          source={{uri: movie.news_url}}
+          source={{uri: news.news_url}}
           style={styles.thumbnail}
         />
         <View style={styles.rightContainer}>
-          <Text style={styles.title}>{movie.news_title}</Text>
-          <Text style={styles.year}>{movie.news_date}</Text>
+          <Text style={styles.title}>{news.news_title}</Text>
+          <Text style={styles.year}>{news.news_date}</Text>
         </View>
       </View>
+      </TouchableHighlight>
     );
   },
+
+   _pressRow: function(video_id, rowID: number) {
+      // console.log(news_url)
+      Intent.mail({
+        url: video_id,
+      });
+    },
 
 });
 
