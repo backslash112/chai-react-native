@@ -7,7 +7,7 @@ Chai is an ambitious project with the aim to create a full-fledged news consumpt
 
 ## Setup
 
-Follow "Getting Started" guide from [**React Native GitHub**](https://facebook.github.io/react-native/docs/getting-started.html#content)
+Follow "Getting Started" guide from [**Facebook's React Native GitHub**](https://facebook.github.io/react-native/docs/getting-started.html#content)
 
 ```
 npm install -g react-native-cli
@@ -22,8 +22,8 @@ If you get an error, in another window run
 ## Completed
 
 1. We have an initial view that
-	* loads json from http://chai.media/public_api/random/
-	* renders it into a listview
+	* Loads json from http://chai.media/public_api/random/
+	* Renders it into a listview
 
 ## TODOs
 
