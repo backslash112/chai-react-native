@@ -24,7 +24,7 @@ If you get an error, in another window run
 1. We have an initial view that
 	* Loads json from http://chai.media/public_api/random/
 	* Renders it into a listview
-2. A Custom React Native Intent Module Exists to play the news YouTube video by throwing an Intent when you click on a list item.
+2. A Custom React Native Intent Module exists to play the news YouTube video by throwing an Intent when you click on a list item.
 
 ## TODOs
 
