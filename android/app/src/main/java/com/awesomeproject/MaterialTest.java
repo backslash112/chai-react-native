@@ -1,19 +1,13 @@
 package com.awesomeproject;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -53,6 +47,29 @@ public class MaterialTest extends AppCompatActivity {
             }
         }
 
+        mViewPager.getViewPager().setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(int position) {
+
+                return new DummyFragment();
+            }
+
+            @Override
+            public int getCount() {
+                return 4;
+            }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                if(position==0) {
+                    return "Hello World";
+                }
+                else {
+                    return "Hello";
+                }
+            }
+        });
+
         mViewPager.setMaterialViewPagerListener(new MaterialViewPager.Listener() {
             @Override
             public HeaderDesign getHeaderDesign(int page) {
@@ -81,8 +98,8 @@ public class MaterialTest extends AppCompatActivity {
             }
         });
 
-//        mViewPager.getViewPager().setOffscreenPageLimit(mViewPager.getViewPager().getAdapter().getCount());
-//        mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
+        mViewPager.getViewPager().setOffscreenPageLimit(mViewPager.getViewPager().getAdapter().getCount());
+        mViewPager.getPagerTitleStrip().setViewPager(mViewPager.getViewPager());
 
         View logo = findViewById(R.id.logo_white);
         if (logo != null)
@@ -94,5 +111,5 @@ public class MaterialTest extends AppCompatActivity {
                 }
             });
     }
-    
+
 }
