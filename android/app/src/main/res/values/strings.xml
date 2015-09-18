@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AwesomeProject</string>
+    <string name="title_activity_material_test">MaterialTest</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>
