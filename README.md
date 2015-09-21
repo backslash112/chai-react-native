@@ -53,11 +53,11 @@ If you get an error, in another window run
 
 ## Bug Tracker
 
-Found a bug? Report it [here](https://github.com/chaimedia/chai-android/issues/)!
+Found a bug? Report it [here](https://github.com/chaimedia/chai-react-native/issues/)!
 
 ## Feature Request
 
-Have an idea? Add it [here](https://github.com/chaimedia/chai-android/issues/)!
+Have an idea? Add it [here](https://github.com/chaimedia/chai-react-native/issues/)!
 
 ## License
 
