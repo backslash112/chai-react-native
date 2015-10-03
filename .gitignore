@@ -27,3 +27,5 @@ project.xcworkspace
 node_modules/
 npm-debug.log
 android/.idea/
+android/.gradle/
+android/local.properties
