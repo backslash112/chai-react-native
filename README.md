@@ -18,6 +18,9 @@ react-native run-android
 If you get an error, in another window run
 `adb reverse tcp:8081 tcp:8081`
 
+If watcher says it took too long to load re-run
+`react-native run-android`
+
 
 ## Completed
 
@@ -47,17 +50,17 @@ If you get an error, in another window run
    * This one view should behave differently depending on the type of content that is being requested to be shown in detail
    * If it is an entity (eg: Trump / Google / India )
       > example: http://chai.media/channel/India/
-   * If it is a news article 
+   * If it is a news article
       > example: http://chai.media/video/south-china-sea-dispute-china-builds-third-airstrip-at-mischief-reef-tomonews/
       * Video play button will throw an intent to open the YouTube video
 
 ## Bug Tracker
 
-Found a bug? Report it [here](https://github.com/chaimedia/chai-android/issues/)!
+Found a bug? Report it [here](https://github.com/chaimedia/chai-react-native/issues/)!
 
 ## Feature Request
 
-Have an idea? Add it [here](https://github.com/chaimedia/chai-android/issues/)!
+Have an idea? Add it [here](https://github.com/chaimedia/chai-react-native/issues/)!
 
 ## License
 

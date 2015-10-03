@@ -33,9 +33,7 @@ public class RNIntentModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void mail(ReadableMap options) {
-//      Log.v(TAG, "function callllled!");
-//      Log.v(TAG, options.getString("url"));
-      Intent i = new Intent(Intent.ACTION_VIEW,Uri.parse("vnd.youtube://" + Uri.parse(options.getString("url"))) );
+      Intent i = new Intent(Intent.ACTION_VIEW,Uri.parse("vnd.youtube://" + options.getString("url")));
       i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       this.reactContext.startActivity(i);
   }
