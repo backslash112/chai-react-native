@@ -64,5 +64,5 @@ Have an idea? Add it [here](https://github.com/chaimedia/chai-react-native/issue
 
 ## License
 
-##### chai-android is released under the [MIT License](https://opensource.org/licenses/MIT).
+##### chai-react-native is released under the [MIT License](https://opensource.org/licenses/MIT).
 The full license text is included in `LICENSE.txt`.
