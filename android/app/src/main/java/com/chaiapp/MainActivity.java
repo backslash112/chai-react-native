@@ -1,9 +1,10 @@
-package com.awesomeproject;
+package com.chaiapp;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
+import com.facebook.react.CompositeReactPackage;
 import com.facebook.react.LifecycleState;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactRootView;
@@ -20,22 +21,20 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Init facebook sdk.
-        FacebookSdk.sdkInitialize(getApplicationContext());
         mReactRootView = new ReactRootView(this);
 
         mReactInstanceManager = ReactInstanceManager.builder()
                 .setApplication(getApplication())
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index.android")
-                .addPackage(new MainReactPackage())
-                .addPackage(new RNIntent())
-                .addPackage(new FBLoginButtonPackage())
+                .addPackage(new FBLoginButtonReactPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
 
-        mReactRootView.startReactApplication(mReactInstanceManager, "AwesomeProject", null);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+
+        mReactRootView.startReactApplication(mReactInstanceManager, "ChaiMedia", null);
 
         setContentView(mReactRootView);
     }

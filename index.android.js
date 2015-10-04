@@ -5,8 +5,9 @@
 'use strict';
 
 var React = require('react-native');
-var Intent = require('NativeModules').RNIntent;
-
+// var Intent = require('NativeModules').RNIntent;
+var FBLogin = require('./fblogin');
+       
 var {
   AppRegistry,
   Image,
@@ -43,6 +44,8 @@ var AwesomeProject = React.createClass({
       .done();
   },
   render: function() {
+
+    return (<FBLogin width='100' style={styles.mybutton}/>);
     if (!this.state.loaded) {
       return this.renderLoadingView();
     }
@@ -62,6 +65,7 @@ var AwesomeProject = React.createClass({
         <Text>
           Loading news...
         </Text>
+
       </View>
     );
   },
@@ -129,6 +133,10 @@ var styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  mybutton: {
+    width: 150,
+    height: 50
+  },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+AppRegistry.registerComponent('ChaiMedia', () => AwesomeProject);
