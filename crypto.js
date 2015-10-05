@@ -34,9 +34,12 @@ var encoded_json = new Buffer(json_payload).toString('base64');
 var encoded_signature = new Buffer(signature).toString('base64');
 // console.log("/?data="+encoded_json+"&signature="+encoded_signature);
 
+// POST with just the username let you retrieve details if user exists already
+// PUT will return an error if the user already exists as it is only for creation
+
 request({
-uri: "http://localhost:8000/api/user_create/",
-method: "POST",
+uri: "http://wingztv.com/api/user_create/",
+method: "PUT",
 form: {
 data: encoded_json,
 signature : encoded_signature
