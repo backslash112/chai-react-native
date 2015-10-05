@@ -31,3 +31,4 @@ android/.idea/
 android/.gradle/
 local.properties
 *.iml
+secret-config.json

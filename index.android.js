@@ -5,7 +5,7 @@
 'use strict';
 
 var React = require('react-native');
-// var Intent = require('NativeModules').RNIntent;
+var Intent = require('NativeModules').RNIntent;
 var FBLogin = require('./fblogin');
        
 var {
@@ -90,7 +90,7 @@ var AwesomeProject = React.createClass({
 
    _pressRow: function(video_id, rowID: number) {
       // console.log(news_url)
-      Intent.mail({
+      Intent.intent_youtube({
         url: video_id,
       });
     },
