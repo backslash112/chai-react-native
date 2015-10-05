@@ -46,6 +46,7 @@ var AwesomeProject = React.createClass({
   render: function() {
 
     return (<FBLogin width='100' style={styles.mybutton}/>);
+    
     if (!this.state.loaded) {
       return this.renderLoadingView();
     }

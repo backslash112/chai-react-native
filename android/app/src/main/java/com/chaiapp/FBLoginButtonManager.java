@@ -5,6 +5,7 @@ import com.facebook.react.uimanager.CatalystStylesDiffMap;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.UIProp;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +40,6 @@ public class FBLoginButtonManager extends SimpleViewManager<LoginButton> {
         permissions.add("email");
         root.setReadPermissions(permissions);
         root.setHeight(75);
-
+        Log.v("CHAI","hello");
     }
 }
